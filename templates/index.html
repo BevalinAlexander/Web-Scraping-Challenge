@@ -23,7 +23,7 @@
         <h2>Latest Mars News</h2>
         <p>
             <h4>{{ mars_info.news_title }}</h4>
-            {{ mars_info.news_p }}
+            
         </p>
     </div>
     <div class="container-fluid">
@@ -39,7 +39,7 @@
             </div>
                 <div class="box">
                     <h4 style="padding: 10px; padding-left: 0px">Mars Facts</h4>
-                    {{ mars_info.html_table|safe }}
+                    {{ mars_info.mars_html_table|safe }}
                 </div>
             </div>
         </div>
@@ -51,18 +51,18 @@
             </div>
         </div>
         <div class="row">
-            {% for item in mars_info.image_urls %}
+            <!-- {% for item in mars_info.image_urls %} -->
             <div class="col-lg-6">
                 <div class="thumbnail">
                     <a href="#">
                         <img src="{{ item.img_url }}" alt="Nature" style="width:80%">
                         <div class="caption" style="text-align: center;">
-                            <p>{{ item.title }}</p>
+                            <!-- <p>{{ item.title }}</p> -->
                         </div>
                     </a>
                 </div>
             </div>
-            {% endfor %}
+            <!-- {% endfor %} -->
         </div>
     </div>
 </body>
